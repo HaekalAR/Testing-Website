@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', 'Raleway', sans-serif;
+    background-color: rgb(31, 31, 31);
+}
+
+span {
+    color: red;
+}
+
+::selection {
+    background-color: rgba(47, 68, 161, 0.8);
+}
+
+/* === Background-Animation === */
+
+.container {
+    overflow: hidden;
+
+}
+
+.box div {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-color: transparent;
+    border: 6px outset rgba(47, 68, 161, 0.8);
+}
+
+.box div:nth-child(1) {
+    top: 12%;
+    left: 42%;
+    animation: animate 10s linear infinite;
+}
+
+.box div:nth-child(2) {
+    top: 70%;
+    left: 10%;
+    animation: animate 16s linear infinite;
+}
+
+.box div:nth-child(3) {
+    top: 2%;
+    left: 30%;
+    animation: animate 12s linear infinite;
+}
+
+.box div:nth-child(4) {
+    top: 10%;
+    left: 70%;
+    animation: animate 10s linear infinite;
+}
+
+.box div:nth-child(5) {
+    top: 1%;
+    left: 52%;
+    animation: animate 8s linear infinite;
+}
+
+.box div:nth-child(6) {
+    top: 10%;
+    left: 10%;
+    animation: animate 12s linear infinite;
+}
+
+.box div:nth-child(7) {
+    top: 66%;
+    left: 60%;
+    animation: animate 9s linear infinite;
+}
+
+.box div:nth-child(8) {
+    top: 90%;
+    left: 40%;
+    animation: animate 20s linear infinite;
+}
+
+.box div:nth-child(9) {
+    top: 90%;
+    left: 90%;
+    animation: animate 9s linear infinite;
+}
+
+.box div:nth-child(10) {
+    top: 70%;
+    left: 70%;
+    animation: animate 16s linear infinite;
+}
+
+@keyframes animate {
+    0%{
+        transform: scale(0) translateY(0) rotate(0);
+        opacity: 1;
+    }
+    100%{
+        transform: scale(1.3) translateY(-90px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* === Navbar === */
+
+header {
+    height: 7vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: .6s;
+    padding: 40px 100px;
+    z-index: 1000;
+}
+
+header.sticky {
+    padding: 5px 100px;
+    background: #fff;
+}
+
+header .logo, a {
+    position: relative;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1em;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: .6s;
+
+}
+
+header ul {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+header  ul li {
+    position: relative;
+    list-style-type: none;
+}
+
+header  ul li a{
+    position: relative;
+    margin: 0 15px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    letter-spacing: 2px;
+    transition: .6s;
+}
+header.sticky .logo a,
+header.sticky ul li a {
+    color: #000;
+}
+
+
+/* === Navbar Hover === */
+
+.logo a:hover {
+    color:rgba(47, 68, 161, 0.8);
+}
+
+header ul li a:hover {
+    color: red;
+}
+
+/* === Home === */
+
+.home {
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    height: 120vh;
+}
+
+.home img {
+    border-radius: 50%;
+    width: 10em;
+    height: 10em;
+}
